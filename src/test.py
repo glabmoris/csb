@@ -39,12 +39,3 @@ print("Uncertainty")
 u = uncertainty.TotalPropagatedUncertainty()
 
 tpu = u.compute(latitude,longitude,ellipsoidal_height,heading,pitch,roll,depth,offset_x,offset_y,offset_z,latitude_sigma,longitude_sigma,ellipsoidal_height_sigma,heading_sigma,pitch_sigma,roll_sigma,depth_sigma,offset_x_sigma,offset_y_sigma,offset_z_sigma)
-
-print(tpu)
-error_x=math.sqrt(tpu[0][0])
-error_y=math.sqrt(tpu[1][1])
-error_z=math.sqrt(tpu[2][2])
-
-print(f"Approximate x error: {error_x:.3f} m")
-print(f"Approximate y error: {error_y:.3f} m")
-print(f"Approximate z error: {error_z:.3f} m")
